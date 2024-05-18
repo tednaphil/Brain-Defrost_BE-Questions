@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 May 2024 19:19:44 GMT
+      - Sat, 18 May 2024 19:46:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Openai-Organization:
       - user-cqno5n9tuxhuwnsfmv53dlcm
       Openai-Processing-Ms:
-      - '3428'
+      - '2908'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -57,35 +57,35 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 128ms
       X-Request-Id:
-      - req_52505f0b2da317d9e3a4a13bf7a2ffce
+      - req_26871b6a9b42d077a3b504149c3d298b
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=5_p9BN_PEz86Rq_zApwxp6BTyeCmcWolJA7v5xCDgro-1716059984-1.0.1.1-WOz49h_QMZtsIUYYWpasKFsNFxcOvdAqW3EV5u2jSLjU51oHW9aZx_VqW0b445VWXj10IGzkFE7uRwVeOHgjfg;
-        path=/; expires=Sat, 18-May-24 19:49:44 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=t96xqhY6g8wLPkfns0wqaoz0B7eowiBOBcq37mQDHZk-1716061565-1.0.1.1-4.ZhoYkfSNd0MZRjP9OlZCb.At91rN1oI9kH4koHfnzbJLAEFeZ._RimDcq9Xel0SMomjqmDVby0hPeBrO4BbA;
+        path=/; expires=Sat, 18-May-24 20:16:05 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=9OX2f5U43ZycxQ6DKh38JlqYN20WsiuFv2PTpIBzIJc-1716059984887-0.0.1.1-604800000;
+      - _cfuvid=sGnoDAxQmXDW9oHWv3iMXAuKsb0R_dTL14I_ljZnJAc-1716061565297-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 885e33438d0f6dd4-MIA
+      - 885e59dbe9df3347-MIA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9QJsjRpDlJrpMWxzHq3KHmM3p12Dl",
+          "id": "chatcmpl-9QKIEpj9xtIhUzoqZpdlMLHvg0FHf",
           "object": "chat.completion",
-          "created": 1716059981,
+          "created": 1716061562,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Which band released the album 'Abbey Road'?\",\n                \"correct_answer\": \"The Beatles\",\n                \"answer_options\": [\"The Beatles\", \"Led Zeppelin\", \"Queen\", \"Pink Floyd\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Michael Jackson\", \"Elvis Presley\", \"Prince\", \"Madonna\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"Which artist released the song 'Shape of You'?\",\n                \"correct_answer\": \"Ed Sheeran\",\n                \"answer_options\": [\"Ed Sheeran\", \"Taylor Swift\", \"Ariana Grande\", \"Justin Bieber\"]\n            }\n        }\n    ]\n}"
+                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Elvis Presley\", \"Madonna\", \"Michael Jackson\", \"Beyonce\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"What instrument does a saxophonist play?\",\n                \"correct_answer\": \"Saxophone\",\n                \"answer_options\": [\"Violin\", \"Trumpet\", \"Saxophone\", \"Drums\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"Which band is known for the hit song 'Stairway to Heaven'?\",\n                \"correct_answer\": \"Led Zeppelin\",\n                \"answer_options\": [\"The Beatles\", \"Rolling Stones\", \"Led Zeppelin\", \"Queen\"]\n            }\n        }\n    ]\n}"
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -93,10 +93,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 99,
-            "completion_tokens": 236,
-            "total_tokens": 335
+            "completion_tokens": 239,
+            "total_tokens": 338
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 18 May 2024 19:19:44 GMT
+  recorded_at: Sat, 18 May 2024 19:46:05 GMT
 recorded_with: VCR 6.2.0

@@ -32,7 +32,7 @@ RSpec.configure do |config|
           url: 'https://brain-defrost-f8afea5ead0a.herokuapp.com',
         },
         {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:5000'
         }
       ],
       tags: [
