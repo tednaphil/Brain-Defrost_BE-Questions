@@ -1,19 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe QuestionService do
-  before do
-    @question_number = 3
-    @topic = "music"
-  end
- 
   describe '.create_trivia_questions(topic, question_number)' do
+    let!(:question_number) { 3 }
+    let!(:topic) { "music"}
+
     context 'happy path' do
       it 'returns generated trivia questions', :vcr do
-        service_response = QuestionService.create_trivia_questions(@topic, @question_number)
+        service_response = QuestionService.create_trivia_questions(topic, question_number)
 
         expect{ service_response }.not_to raise_error
         check_hash_structure(service_response, :data, Array)
-        
+
         service_response[:data].each do |data|
           check_hash_structure(data, :id, String)
           check_hash_structure(data, :attributes, Hash)
@@ -31,7 +29,7 @@ RSpec.describe QuestionService do
         stub_request(:post, 'https://api.openai.com/v1/chat/completions')
           .to_return(status: 500)
 
-        service_response = QuestionService.create_trivia_questions(@topic, @question_number)
+        service_response = QuestionService.create_trivia_questions(topic, question_number)
         expect(service_response).to eq("Unable to create trivia questions at this time")
       end
     end

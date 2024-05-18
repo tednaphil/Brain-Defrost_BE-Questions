@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Write
+        3 trivia questions about music. Answer options to the trivia questions should
+        be three words max. Format the JSON response according to JSON:API v1.1 standards.
+        Keys in the ''attributes'' section of the response for each question should
+        include: ''question_text'', ''correct_answer'', and ''answer_options'' (an
+        array of consisting of 4 answer options, including one that''s the correct
+        answer. Questions and answers should be written in english.","format":"json"}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - "<API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 May 2024 19:19:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Organization:
+      - user-cqno5n9tuxhuwnsfmv53dlcm
+      Openai-Processing-Ms:
+      - '3428'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59872'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 128ms
+      X-Request-Id:
+      - req_52505f0b2da317d9e3a4a13bf7a2ffce
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=5_p9BN_PEz86Rq_zApwxp6BTyeCmcWolJA7v5xCDgro-1716059984-1.0.1.1-WOz49h_QMZtsIUYYWpasKFsNFxcOvdAqW3EV5u2jSLjU51oHW9aZx_VqW0b445VWXj10IGzkFE7uRwVeOHgjfg;
+        path=/; expires=Sat, 18-May-24 19:49:44 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=9OX2f5U43ZycxQ6DKh38JlqYN20WsiuFv2PTpIBzIJc-1716059984887-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 885e33438d0f6dd4-MIA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-9QJsjRpDlJrpMWxzHq3KHmM3p12Dl",
+          "object": "chat.completion",
+          "created": 1716059981,
+          "model": "gpt-3.5-turbo-0125",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n    \"data\": [\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"1\",\n            \"attributes\": {\n                \"question_text\": \"Which band released the album 'Abbey Road'?\",\n                \"correct_answer\": \"The Beatles\",\n                \"answer_options\": [\"The Beatles\", \"Led Zeppelin\", \"Queen\", \"Pink Floyd\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"2\",\n            \"attributes\": {\n                \"question_text\": \"Who is known as the King of Pop?\",\n                \"correct_answer\": \"Michael Jackson\",\n                \"answer_options\": [\"Michael Jackson\", \"Elvis Presley\", \"Prince\", \"Madonna\"]\n            }\n        },\n        {\n            \"type\": \"trivia_question\",\n            \"id\": \"3\",\n            \"attributes\": {\n                \"question_text\": \"Which artist released the song 'Shape of You'?\",\n                \"correct_answer\": \"Ed Sheeran\",\n                \"answer_options\": [\"Ed Sheeran\", \"Taylor Swift\", \"Ariana Grande\", \"Justin Bieber\"]\n            }\n        }\n    ]\n}"
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 99,
+            "completion_tokens": 236,
+            "total_tokens": 335
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sat, 18 May 2024 19:19:44 GMT
+recorded_with: VCR 6.2.0
