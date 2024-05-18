@@ -4,7 +4,7 @@ class Api::V1::QuestionsController < ApplicationController
     if questions.class == String
       render json: { error: { message: questions} }, status: :internal_server_error
     else
-      render json: QuestionSerializer.new(questions)
+      render json: QuestionSerializer.new(questions), status: :created
     end
   end
 end

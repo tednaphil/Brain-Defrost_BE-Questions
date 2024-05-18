@@ -29,7 +29,7 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
-          url: 'https://brain-defrost-f8afea5ead0a.herokuapp.com',
+          url: 'https://brain-defrost-be-questions.onrender.com/',
         },
         {
           url: 'http://localhost:5000'
