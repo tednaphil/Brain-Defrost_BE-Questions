@@ -1,0 +1,67 @@
+---
+openapi: 3.0.1
+info:
+  title: Brain Defrost Questions API
+  version: v1
+  description: API endpoints with examples for a trivia game's questions
+paths:
+  "/api/v1/questions":
+    post:
+      summary: Create a list trivia questions
+      tags:
+      - Questions
+      parameters: []
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type:
+                          - string
+                          - 'null'
+                        type:
+                          type: string
+                          required: true
+                        attributes:
+                          type: object
+                          properties:
+                            question_text:
+                              type: string
+                            question_number:
+                              type: string
+                            answer:
+                              type: string
+                            options:
+                              type: array
+                              items:
+                                type: string
+        '500':
+          description: Server Error - Cannot create questions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                topic:
+                  type: string
+                  required: true
+                number_of_questions:
+                  type: integer
+                  required: true
+        required: true
+servers:
+- url: https://brain-defrost-f8afea5ead0a.herokuapp.com
+- url: http://localhost:5000
+tags:
+- name: Questions
+  description: Access a trivia game's questions
