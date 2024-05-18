@@ -17,7 +17,7 @@ RSpec.describe 'api/v1/questions', type: :request do
         }
       }
 
-      response(200, 'successful') do
+      response(201, 'successful') do
         let(:params) { {
           topic: "sorcery",
           number_of_questions: 8,
@@ -52,7 +52,7 @@ RSpec.describe 'api/v1/questions', type: :request do
         })
 
         run_test! vcr: true do |example|
-          expect(response).to have_http_status(200)
+          expect(response).to have_http_status(201)
 
           parsed_data = JSON.parse(response.body, symbolize_names: true)
           expect(parsed_data[:data].size).to eq 8
