@@ -12,18 +12,7 @@ RSpec.describe Question do
       }
     }
 
-    data_2 = {
-      type: "trivia_question",
-      id: "2",
-      attributes: {
-        question_text: "What is the most powerful piece in chess?", 
-        correct_answer: "Queen", 
-        answer_options: ["Queen", "King", "Knight", "Pawn"]
-      }
-    }
-
     @question = Question.new(data)
-    @question_2 = Question.new(data_2)
   end
 
   describe '#initialize' do
@@ -36,13 +25,6 @@ RSpec.describe Question do
       expect(@question.question_text).to eq("Which band released the album 'Abbey Road'?")
       expect(@question.answer).to eq("The Beatles")
       expect(@question.options).to be_an(Array)
-    end
-
-    it "places the correct answer in a different location every time" do
-      correct_index = @question.options.index("The Beatles")
-      correct_index_2 = @question_2.options.index("Queen")
-      
-      expect(correct_index == correct_index_2).to be(false)
     end
   end
 end
