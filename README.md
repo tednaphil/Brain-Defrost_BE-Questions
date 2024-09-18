@@ -39,6 +39,7 @@ This project was completed for Turing's Capstone Project for Mod 4. [Part 1](htt
 2. In terminal, run `git clone <ssh or https path>`
 3. Navigate into the cloned project by running `cd Brain-Defrost_BE-Questions`
 4. Run `bundle install` to install gems used for this project
+5. Setup the database by running rails db:{drop,create,migrate}
 
 ### External API Setup
 Trivia question's are created using [OpenAI's API](https://platform.openai.com/docs/api-reference/introduction). You must use your own API key in order to access it. 
